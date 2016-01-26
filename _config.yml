@@ -1,0 +1,11 @@
+# Site settings
+title: Manovuelta
+email: contacto@manovuelta.org.ve
+description: Colectivo Social Manovuelta
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://manovuelta.org.ve" # the base hostname & protocol for your site
+twitter_username: manovueltaradio
+github_username:  manovuelta
+
+# Build settings
+markdown: kramdown

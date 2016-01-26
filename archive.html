@@ -1,0 +1,29 @@
+---
+layout: default
+title: Archivo
+---
+<article id="main">
+    <header class="special container">
+        <span class="icon fa-history"></span>
+        <h2><strong>Archivo</strong></h2>
+    </header>
+
+    <section class="style4 wrapper container">
+      {%for post in site.posts %}
+        {% unless post.next %}
+        <strong>{{ post.date | date: '%Y' }}</strong>
+        <ul class="this">
+        {% else %}
+          {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+          {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+          {% if year != nyear %}
+            </ul>
+            <strong>{{ post.date | date: '%Y' }}</strong>
+            <ul class="past">
+          {% endif %}
+        {% endunless %}
+          <li><time>{{ post.date | date:"%d %b" }}</time> - <a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+      </ul>
+    </section>
+</article>
