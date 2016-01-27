@@ -349,6 +349,15 @@
 					background: #e1b89b;
 				}
 
+			.icon.circle.fa-envelope-o {
+				background: #dcad8b;
+				color: white;
+			}
+
+			.icon.circle.fa-envelope-o:hover {
+				background: #e1b89b;
+			}
+
 			.icon.circle.fa-dribbble {
 				background: #da83ae;
 				color: white;
